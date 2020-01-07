@@ -40,6 +40,8 @@ namespace エンジン {
 		void 更新(float 経過時間, レンダリングサービス& レンダリングサービス);
 		void 更新後処理();
 		void 描画(レンダリングサービス& レンダリングサービス);
+
+		bool 自弾の位置(int index, double* x, double* y);
 	};
 
 

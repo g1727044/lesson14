@@ -29,7 +29,6 @@ namespace エンジン {
 		static constexpr unsigned int マスク_下			= (1 << 下);
 		static constexpr unsigned int マスク_左			= (1 << 左);
 		static constexpr unsigned int マスク_右			= (1 << 右);
-
 	private:
 		unsigned char 前フレーム_ = 0;
 		入力データ 入力データ_;
