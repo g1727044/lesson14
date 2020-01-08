@@ -39,6 +39,9 @@
     <ClCompile Include="当たり判定.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="背景スクロール.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="エンジン.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="当たり判定.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="背景スクロール.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

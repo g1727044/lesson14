@@ -95,6 +95,8 @@ namespace エンジン {
 
 		void 描画_左上(unsigned int リソースID, int x, int y);
 		void 描画(unsigned int リソースID, int x, int y);
+
+		void 背景スクロール_リサイズ(unsigned int リソースID, int x, int y, float サイズ);
 	};
 
 	class リソース_ローダー

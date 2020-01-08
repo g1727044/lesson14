@@ -26,6 +26,7 @@ namespace エンジン
 		if (_tcscmp(L"スプライトコンポーネント", 名前) == 0) { return nullptr != dynamic_cast<const スプライトコンポーネント*>(インスタンス); }
 		if (_tcscmp(L"入力コンポーネント", 名前) == 0) { return nullptr != dynamic_cast<const 入力コンポーネント*>(インスタンス); }
 		if (_tcscmp(L"弾丸コンポーネント", 名前) == 0) { return nullptr != dynamic_cast<const 弾丸コンポーネント*>(インスタンス); }
+		if (_tcscmp(L"背景コンポーネント", 名前) == 0) { return nullptr != dynamic_cast<const 背景コンポーネント*>(インスタンス); }
 
 		return false;
 	}
@@ -40,6 +41,7 @@ namespace エンジン
 			{ L"スプライトコンポーネント",   [](エンティティ& 親) { return (コンポーネント*)(new スプライトコンポーネント(親)); } },
 			{ L"入力コンポーネント",         [](エンティティ& 親) { return (コンポーネント*)(new 入力コンポーネント(親)); } },
 			{ L"弾丸コンポーネント",         [](エンティティ& 親) { return (コンポーネント*)(new 弾丸コンポーネント(親)); } },
+			{ L"背景コンポーネント",         [](エンティティ& 親) { return (コンポーネント*)(new 背景コンポーネント(親)); } },
 		};
 
 		for(const auto &c : 対応表)
@@ -124,6 +126,7 @@ namespace エンジン
 		case 種類::プレイヤー: return nullptr != dynamic_cast<const プレイヤー・エンティティ*>(インスタンス);
 		case 種類::ステージ１: return nullptr != dynamic_cast<const ステージ１・エンティティ*>(インスタンス);
 		case 種類::ザコ１: return nullptr != dynamic_cast<const ザコ１・エンティティ*>(インスタンス);
+		case 種類::背景: return nullptr != dynamic_cast<const 背景・エンティティ*>(インスタンス);
 		default:return false; // おかしな種類が指定された
 		}
 		return false;
@@ -142,6 +145,9 @@ namespace エンジン
 			break;
 		case 種類::ザコ１:
 			p = new ザコ１・エンティティ();
+			break;
+		case 種類::背景:
+			p = new 背景・エンティティ();
 			break;
 		default:
 			return -1; // おかしな種類が指定された

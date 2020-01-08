@@ -133,6 +133,7 @@
     <ClCompile Include="サービス・弾丸.cpp" />
     <ClCompile Include="具象エンティティ.cpp" />
     <ClCompile Include="当たり判定.cpp" />
+    <ClCompile Include="背景スクロール.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="エンジン.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="サービス・弾丸.h" />
     <ClInclude Include="共通.h" />
     <ClInclude Include="当たり判定.h" />
+    <ClInclude Include="背景スクロール.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
